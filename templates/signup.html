@@ -1,0 +1,57 @@
+<link rel ="stylesheet" href="/static/CSS/signup.css">
+
+<div class="topnav">
+    <a class="active" href="#home">The To-Do Ninja</a>
+    <a href="#about">Home</a>
+    <a href="#about">About</a>
+    <a href="#about">Contact US</a>
+    <a href="{% url 'login' %}">Login</a>
+  </div>
+  
+
+<div class="container" >
+    <form class="registration" action="" method="post">
+        {% csrf_token %} 
+        <h1>Registration Form</h1>
+
+        <label for="username">
+            <span>Username</span>
+
+            <input type="text" id="username" name="username" minlength="3" required>
+
+            <ul class="input-requirements">
+                <li>At least 3 characters long</li>
+                <li>Must only contain letters and numbers (no special characters)</li>
+            </ul>
+        </label>
+
+        <label for="username">
+            <span>Email</span>
+
+            <input type="text" id="email" name="email" minlength="3" required>
+        </label>
+
+
+        <label for="password">
+            <span>Password</span>
+            <input type="password" id="password" 
+                    name="password1" maxlength="100" minlength="8" required>
+
+            <ul class="input-requirements">
+                <li>At least 8 characters long (and less than 100 characters)</li>
+                <li>Contains at least 1 number</li>
+                <li>Contains at least 1 lowercase letter</li>
+                <li>Contains at least 1 uppercase letter</li>
+                <li>Contains a special character (e.g. @ !)</li>
+            </ul>
+        </label>
+
+        <label for="password_repeat">
+            <span>Repeat Password</span>
+            <input type="password" id="password_repeat" name="password2" maxlength="100" minlength="8" required>
+        </label>
+
+        <br>
+        <button class="button-32" type="submit" role="button">Submit</button>
+    </form>
+</div>

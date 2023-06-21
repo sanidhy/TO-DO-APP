@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-link {
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    background-color: #444;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+  
+  
